@@ -1,0 +1,146 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  overflow-x: hidden
+  opacity: 1
+  background-color: #fff
+  &.ishome
+    .site-header
+      min-height: 500px
+      .top-line
+        position: absolute
+        width: 100%
+        z-index: 1
+        .icons
+            position: absolute
+            right: 20px
+            top: 35px
+            font-size: 20px
+            a
+              color: white
+              transition: color .2s ease
+            a:hover
+              color: grey
+              
+        .top-line-list
+          position: absolute
+          left: 85px
+          top: 24px
+          .list-items
+            display: inline
+            margin-left: 10px
+            letter-spacing: 2px
+            color: #fff
+            font-family: oswald-example
+            text-transform: uppercase
+          a
+            line-height: 1
+            display: inline-block
+            color: #000
+            text-decoration: none
+            cursor: pointer
+            &:after
+              display: block
+              content: ""
+              height: 1px
+              width: 0%
+              margin-left: 10px
+              background-color: #fff
+              transition: width .3s ease-in-out
+            &:hover:after,&:focus:after
+              width: 100%
+        a:nth-child(2),a:nth-child(3)
+          margin-left: 20px
+            
+        
+.logo
+  img
+    width: 125px
+    height: auto
+	
+.photo-section
+  width: 100%
+  z-index: 1
+  p
+    text-align: center
+    font-family: oswald-example
+    text-transform: uppercase
+    letter-spacing: 8px
+    font-size: 18px
+    margin-top: 30px
+    margin-bottom: 0px
+    color: #BDA549
+  h1
+    line-height: 1
+    text-align: center
+    font-family: secular-example
+    text-transform: uppercase
+    font-size: 85px
+    font-weight: bold
+    color: rgba(0,0,0,0.8)
+    margin: 0
+    padding-top: 0
+    padding-bottom: 0
+
+section, header
+  position: relative
+  background-size: cover
+  background-position: center bottom
+
+section
+    background-color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+@import "media" // Всегда в конце
