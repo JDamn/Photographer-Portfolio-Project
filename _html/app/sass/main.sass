@@ -105,9 +105,11 @@ body
   p
     text-align: center
     font-family: oswald-example
+    font-weight: bold
     text-transform: uppercase
-    letter-spacing: 8px
-    font-size: 18px
+    word-spacing: 20px
+    letter-spacing: 12px
+    font-size: 20px
     margin-top: 30px
     margin-bottom: 0px
     color: #BDA549
@@ -122,6 +124,44 @@ body
     margin: 0
     padding-top: 0
     padding-bottom: 0
+  
+.photo-albums
+  position: absolute
+  width: 100%
+  z-index: 1 
+  display: inline
+  list-style-type: none
+  text-align: center
+  padding: 0px
+  margin: 0
+  margin-top: 50px
+  align-items: center
+  a
+    display: inline-block
+    text-decoration: none
+    color: grey
+    transition: color .2s ease
+    font-family: oswald-example
+  a:nth-child(2),a:nth-child(3),a:nth-child(4)
+    margin-left: 35px
+  a:nth-child(1)
+    margin-left: -8px
+  a:hover
+    color: #000
+    font-weight: bold
+
+.container
+    text-align: center
+    margin-top: 100px
+    .col-md-4
+        padding: 0px
+        img
+            width: 70%
+
+.space
+    margin-top: 20px
+    margin-bottom: 20px
+            
 
 section, header
   position: relative
@@ -138,6 +178,53 @@ section
 
 .text-center
 	text-align: center
+
+//Preloader
+@mixin opacity($opacity)
+  opacity: $opacity / 100
+  filter: alpha(opacity=$opacity)
+
+.preloader
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: 100
+  background-color: rgba(0,0,0,0.9)
+  .pulse
+    position: relative
+    left: 50%
+    top: 50vh
+    margin: 
+      left: -40px
+      top: -40px
+    &::before, &::after
+      content: ''
+      border: 2px solid #BDA549
+      width: 80px
+      height: 80px
+      border-radius: 10em
+      position: absolute
+    &::before
+      animation: pulse-outer .8s ease-in infinite
+    &::after
+      animation: pulse-inner .8s linear infinite
+
+@keyframes pulse-outer
+  0%
+    @include opacity(100)
+  50%
+    @include opacity(50)
+  100%
+    @include opacity(0)
+@keyframes pulse-inner
+  0%
+    @include opacity(0)
+    transform: scale(0)
+  100%
+    @include opacity(100)
+    transform: scale(1)
 
 ::selection
 	background-color: $accent
