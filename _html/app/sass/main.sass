@@ -151,18 +151,22 @@ body
     font-weight: bold
 
 .container
-    text-align: center
-    margin-top: 100px
-    .col-md-4
-        padding: 0px
-        img
-            width: 70%
+  margin-top: 100px
+  padding: 0
+  position: relative
+  width: 100%
+  z-index: 1
+  align-self: center
 
-.space
-    margin-top: 20px
-    margin-bottom: 20px
-            
-
+.grid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(3, 400px)
+  grid-gap: 20px
+  width: 70%
+  margin: 0
+    
+    
 section, header
   position: relative
   background-size: cover
