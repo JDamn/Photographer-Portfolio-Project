@@ -101,7 +101,8 @@ body
 	
 .photo-section
   width: 100%
-  z-index: 1
+  z-index: 1 
+  justify-content: center
   p
     text-align: center
     font-family: oswald-example
@@ -147,30 +148,38 @@ body
   a:nth-child(1)
     margin-left: -8px
   a:hover
+    cursor: pointer
     color: #000
     font-weight: bold
 
-.container
+.grid-container
+  display: grid
   margin-top: 100px
-  padding: 0
-  position: relative
-  width: 100%
   z-index: 1
-  align-self: center
-
+  width: 100%
+  margin-bottom: 50px
+  
 .grid
   display: grid
   grid-template-columns: repeat(3, 1fr)
-  grid-template-rows: repeat(3, 400px)
-  grid-gap: 20px
-  width: 70%
-  margin: 0
+  grid-gap: 10px
+  margin: 0 auto
+  .grid-item
+    img
+      transition: opacity .2s ease
+    img:hover
+      opacity: 0.8
+      cursor: pointer
+    a
+      width: 80%
     
+/* Modal Images */
+// The Modal (Background)
     
 section, header
   position: relative
   background-size: cover
-  background-position: center bottom
+  background-position: center bottom          
 
 section
     background-color: #fff

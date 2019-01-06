@@ -25,6 +25,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.min.css">
 
 </head>
 
@@ -64,24 +65,32 @@
 		        <p>The Selected Of</p>
 		        <h1>Portfolio</h1>
 		        <ul class="photo-albums">
-                <a href="#"><li class="all-items">All Items</li></a>
-                <a href="#"><li class="personal">Personal</li></a>
-                <a href="#"><li class="photography">Photography</li></a>
-                <a href="#"><li class="portrait">Portrait</li></a>
+                <a class="link-all"><li class="all-items">All Items</li></a>
+                <a class="link-personal"><li class="personal">Personal</li></a>
+                <a class="link-photography"><li class="photography">Photography</li></a>
+                <a class="link-portrait"><li class="portrait">Portrait</li></a>
 		        </ul>
            
-           <div class="container">
+           <div class="grid-container">
                <div class="grid">
              
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
-                  <div><img src="img/preview.jpeg" alt=""></div>
+                   <div class="grid-item all portraitImg"><a href="img/original/4.jpeg" data-fancybox><img src="img/preview/4.jpeg" alt=""></a></div>
+                   
+                   <div class="grid-item all portraitImg"><a href="img/original/8.jpeg" data-fancybox><img src="img/preview/8.jpeg"></a></div>
+                   
+                   <div class="grid-item all portraitImg"><a href="img/original/9.jpeg" data-fancybox><img src="img/preview/9.jpeg" alt=""></a></div>
+                   
+                   <div class="grid-item all personalImg"><a href="img/original/2.jpeg" data-fancybox><img src="img/preview/2.jpeg" alt=""></a></div>
+                   
+                   <div class="grid-item all portraitImg"><a href="img/original/5.jpeg" data-fancybox><img src="img/preview/5.jpeg" alt=""></a></div>
+                   
+                   <div class="grid-item all photographyImg"><a href="img/original/7.jpeg" data-fancybox><img src="img/preview/7.jpeg" alt=""></a></div>
+                   
+                   <div class="grid-item all photographyImg"><a href="img/original/1.jpeg" data-fancybox><img src="img/preview/1.jpeg" alt=""></a></div>
+                   
+                   <div class="grid-item all personalImg"><a href="img/original/6.jpeg" data-fancybox><img src="img/preview/6.jpeg" alt=""></a></div>
+                   
+                   <div class="grid-item all photographyImg"><a href="img/original/3.jpeg" data-fancybox><img src="img/preview/3.jpeg" alt=""></a></div>
                
                </div>
             </div>
@@ -93,8 +102,8 @@
 
 	</div>
 	
-  
   <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
-	<script src="js/scripts.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
 </body>
 </html>

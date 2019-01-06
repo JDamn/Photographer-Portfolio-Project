@@ -1,3 +1,22 @@
 $(window).on('load',function(){
   $('.preloader').delay(2000).fadeOut('slow');
 });
+
+$(".link-all").on('click',function(){
+  $('.all').fadeIn();
+});
+$(".link-personal").on('click',function(){
+   $('.personalImg').fadeIn();
+   $('.photographyImg').fadeOut();
+   $('.portraitImg').fadeOut();
+});
+$(".link-photography").on('click',function(){
+   $('.photographyImg').fadeIn();
+   $('.personalImg').fadeOut();
+   $('.portraitImg').fadeOut();
+});
+$(".link-portrait").on('click',function(){
+   $('.portraitImg').fadeIn();
+   $('.personalImg').fadeOut();
+   $('.photographyImg').fadeOut();
+});
