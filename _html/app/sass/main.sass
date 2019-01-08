@@ -47,7 +47,11 @@ body
   background-color: #fff
   &.ishome
     .site-header
-      min-height: 500px
+      background-attachment: fixed
+      background-position: bottom bottom
+      background-repeat: no-repeat
+      background-size: cover
+      min-height: 580px
       .top-line
         position: absolute
         width: 100%
@@ -173,8 +177,55 @@ body
     a
       width: 80%
     
-/* Modal Images */
-// The Modal (Background)
+.absolute-center
+  position: relative
+  display: block
+  text-align: center
+  margin: 0 auto
+
+a.button
+  box-sizing: border-box
+  display: inline-block
+  width: 8em
+  height: 2.25em
+  padding: 0.5em 1em
+  background-color: #5C5857
+  border: 1px solid #ccc
+  text-align: center
+  color: #BDA549
+  white-space: nowrap
+  line-height: 1.4
+  font-size: 1em
+  font-weight: bold
+  text-decoration: none
+  transition: width 0.1s ease, height 0.4s ease,
+  border-width 0.4s ease,
+  border-radius 0.4s ease,
+  border-color 0.4s ease, padding 0.4s ease, background 0.2s ease
+  &:focus
+    outline:none
+    border-color: #DDD
+  &:hover
+    background: #FAFAFA
+  &.loading
+    height: 35px
+    width: 35px
+    padding: 0
+    border-width: 2px
+    border-radius: 17px
+    border-color: #eee #eee #eee #999
+    background: #fff
+    font-size: 0
+    color: transparent
+    pointer-events: none
+    animation: spin 1.2s infinite linear
+    
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+  
     
 section, header
   position: relative
@@ -204,7 +255,7 @@ section
   right: 0
   left: 0
   z-index: 100
-  background-color: rgba(0,0,0,0.9)
+  background-color: rgba(0,0,0,1)
   .pulse
     position: relative
     left: 50%
